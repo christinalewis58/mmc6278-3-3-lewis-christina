@@ -1,4 +1,3 @@
-function runQuiz() {
 var questionsArr = [
     {question: 'The sky is blue.',
     answer: true
@@ -16,4 +15,9 @@ var questionsArr = [
     answer: true
     }
     ]
+function runQuiz() {
+    
+}
+for(var i = 0; i < questionsArr.length; i++) {
+    runQuiz(questionsArr[i])
 }
