@@ -25,26 +25,25 @@ var questionsArr = [
     }
     ];
 
-function runQuiz(questionsArr) {
-    var correct = 0
-    for(let i = 0; i < questionsArr.length; i++) {
-       
-        var question = questionsArr[i]
-        var answer = confirm(questionsArr.question)
-        
-            if (answer) {
-                correct++
+    function runQuiz() {
+
+ 
+        var correct = 0
+        for(let i = 0; i < questionsArr.length; i++) {
+           
+            var question = questionsArr[question]
+            var answer = window.confirm(questionsArr)
+            
+                if (answer) {
+                    correct++
+                }
+            var score = (Math.round(correct/questionsArr.length * 100))
+
+            } if(correct>= 5) {
+                alert("You got a 100%")
+            }  if(correct=0) {
+                alert("You got a 0%")
+            } else {
+                alert("You got a " + score + "%")
             }
-        score = (Math.round(correct/questionsArr.length * 100))
-
-        } if(correct>= 5) {
-            alert("You got a 100%")
-        }  if(correct=0) {
-            alert("You got a 0%")
-        } else {
-            alert("You got a " + score + "%")
-        }
-          
-} 
-
-
+    }
