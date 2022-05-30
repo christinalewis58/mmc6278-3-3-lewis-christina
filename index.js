@@ -1,46 +1,50 @@
 var questionsArr = [
-    {question: "The sky is blue.",
+    {
+    question: 'The sky is blue',
     answer: true
     },
-    {question: 'The grass is green.',
+
+    {
+    question: 'The grass is green',
     answer: true
     },
-    {question: 'Birds can swim.',
+
+    {
+    question: 'Birds can swim',
     answer: false
     },
-    {question: 'Dogs are not cute.',
+
+    {
+    question: 'Dogs are not cute',
     answer: false
     },
-    {question: 'A foot is twelve inches',
+
+    {
+    question: 'A foot is twelve inches',
     answer: true
     }
     ];
 
-function runQuiz() {
-
-   
- 
+function runQuiz(questionsArr) {
     var correct = 0
     for(let i = 0; i < questionsArr.length; i++) {
        
-        var question = questionsArr[question]
-        var answer = window.confirm(questionsArr)
+        var question = questionsArr[i]
+        var answer = confirm(questionsArr.question)
         
             if (answer) {
                 correct++
             }
-        }
-        
-        if(correct>= Math.round(questionsArr.length / 5)) {
+        score = (Math.round(correct/questionsArr.length * 100))
+
+        } if(correct>= 5) {
             alert("You got a 100%")
-        } else {
+        }  if(correct=0) {
             alert("You got a 0%")
+        } else {
+            alert("You got a " + score + "%")
         }
-
-
-
+          
 } 
 
-function newFunction() {
-    confirm(questionsArr);
-}
+
