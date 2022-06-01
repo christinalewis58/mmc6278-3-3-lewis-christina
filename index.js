@@ -30,20 +30,20 @@ var questionsArr = [
  
         var correct = 0
         for(let i = 0; i < questionsArr.length; i++) {
-           
-            var question = questionsArr[question]
-            var answer = window.confirm(questionsArr)
+            var question = questionsArr[i].question
+            var answer = window.confirm(questionsArr[i].question)
             
-                if (answer) {
-                    correct++
+            if (answer === questionsArr[i].answer) {
+                correct++
                 }
-            var score = (Math.round(correct/questionsArr.length * 100))
-
-            } if(correct>= 5) {
-                alert("You got a 100%")
-            }  if(correct=0) {
-                alert("You got a 0%")
-            } else {
-                alert("You got a " + score + "%")
+        
             }
+
+
+        var score = (Math.round(correct/questionsArr.length * 100))
+
+        alert("You got a " + score + "%")
+        
+          
+        
     }
